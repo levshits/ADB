@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB.Web", "ADB.Web\ADB.Web.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB.Data", "ADB.Data\ADB.Data.csproj", "{64646400-84F1-4B70-ADB4-498CCA0CEDE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB.Common", "ADB.Common\ADB.Common.csproj", "{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{64646400-84F1-4B70-ADB4-498CCA0CEDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64646400-84F1-4B70-ADB4-498CCA0CEDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64646400-84F1-4B70-ADB4-498CCA0CEDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
