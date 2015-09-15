@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Spring.Web.Mvc;
 
 namespace ADB.Web
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : SpringMvcApplication
     {
         protected void Application_Start()
         {
