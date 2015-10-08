@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <!--Sesion storage-->
+  <object id="HttpSessionStorage" type="Levshits.Data.Storage.HttpSessionStorage, Levshits.Data" singleton="true"/>
+  
+  <!--Data provider-->
+  <object id="DataProvider" type="Levshits.Data.DataProvider, Levshits.Data" singleton="true">
+    <constructor-arg name="storage" ref="HttpSessionStorage"/>
+  </object>
+  
+  <!--Base data-->
+  <object id="BaseData" type="Levshits.Data.Data.BaseData, Levshits.Data" abstract="true">
+    <constructor-arg name="dataProvider" ref="DataProvider"/>
+  </object>
+  
+  
+</objects>

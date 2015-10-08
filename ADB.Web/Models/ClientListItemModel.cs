@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Levshits.Web.Common.Models;
 
 namespace ADB.Web.Models
 {
