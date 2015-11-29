@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
-  
+  <import resource="~/Configs/common.xml" />
   <import resource="~/Configs/dal.xml" />
   <import resource="~/Configs/controller.xml" />
+  <import resource="~/Configs/logic.xml" />
 </objects>

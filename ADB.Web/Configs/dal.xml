@@ -1,16 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
+  <!--ADB.Data.Mappers-->
+  <object id="DataMapper" type="ADB.Data.Mappers.DtoMap, ADB.Data" singleton="true"/>
+  
   <!--Sesion storage-->
   <object id="HttpSessionStorage" type="Levshits.Data.Storage.HttpSessionStorage, Levshits.Data" singleton="true"/>
   
   <!--Data provider-->
-  <object id="DataProvider" type="Levshits.Data.DataProvider, Levshits.Data" singleton="true">
+  <object id="DataProvider" type="Levshits.Data.DataProvider, Levshits.Data" abstract="true">
     <constructor-arg name="storage" ref="HttpSessionStorage"/>
   </object>
-  
+
+  <!--ADB Data provider-->
+  <object id="AdbDataProvider" type="ADB.Data.Common.AdbDataProvider, ADB.Data" parent="DataProvider" singleton="true">
+  </object>
+   
   <!--Base data-->
   <object id="BaseData" type="Levshits.Data.Data.BaseData, Levshits.Data" abstract="true">
-    <constructor-arg name="dataProvider" ref="DataProvider"/>
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
+
+  <!--Client data-->
+  <object id="ClientData" type="ADB.Data.Data.ClientData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
+
+  <!--City data-->
+  <object id="CityData" type="ADB.Data.Data.CityData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
+  
+  <!--Repository-->
+  <object id="Repository" type="ADB.Data.Common.AdbRepository" singleton="true">
+    <property name="Client" ref="ClientData"/>
+    <property name="City" ref="CityData"/>
   </object>
   
   

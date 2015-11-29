@@ -12,7 +12,7 @@
         /// Gets or sets the items per page.
         /// </summary>
         /// <value>The items per page.</value>
-        public int ItemsPerPage { get; set; }
+        public int ItemsPerPage { get; set; } = 10;
 
         /// <summary>
         /// Gets or sets the items count.

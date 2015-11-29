@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <!--CommandBus-->
+  <object id="CommandBus" type="Levshits.Logic.Common.CommandBus, Levshits.Logic" singleton="true"/>
+
+  <!--Transactional CommandBus-->
+  <object id="TransactionalCommandBus" type="Levshits.Logic.Common.TransactionalCommandBus, Levshits.Logic" singleton="true">
+    <constructor-arg name="commandBus" ref="CommandBus"/>
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
+  
+  <!--BloBase-->
+  <object id="BloBase" type="Levshits.Logic.BloBase" init-method="Init" abstract="true">
+    <constructor-arg name="repository" ref="Repository"/>
+  </object>
+  
+  <!--ClientBlo-->
+  <object id="ClientBlo" type="ADB.Logic.Blo.ClientBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>
+
+  <!--CityBlo-->
+  <object id="CityBlo" type="ADB.Logic.Blo.CityBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>
+</objects>

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using Levshits.Data.Common;
 
-namespace ADB.Web.Attribute
+namespace ADB.Web.Attributes
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = true)]
     public class TransactionalAttribute: ActionFilterAttribute

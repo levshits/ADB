@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Linq.Expressions;
-using FluentNHibernate.Cfg;
 using Levshits.Data.Common;
 using Levshits.Data.Entity;
 using NHibernate;
-using NHibernate.Cfg;
 using NHibernate.Linq;
 
 namespace Levshits.Data
@@ -13,7 +11,7 @@ namespace Levshits.Data
     /// <summary>
     /// 	Represents provider class for working with database.
     /// </summary>
-    public class DataProvider : IDataProvider
+    public abstract class DataProvider : IDataProvider
     {
         private readonly ISessionFactory _factory;
         private readonly ISessionStorage _storage;
@@ -24,14 +22,11 @@ namespace Levshits.Data
         public DataProvider(ISessionStorage storage)
         {
             _storage = storage;
-
-            var cfg = new Configuration();
-            cfg.Configure(); // read config default style
-            Fluently.Configure(cfg)
-                .Mappings(
-                  m => m.FluentMappings.AddFromAssemblyOf<DataProvider>())
-                .BuildSessionFactory();
+            _factory = InitFactory();
+            
         }
+
+        public abstract ISessionFactory InitFactory();
 
         /// <summary>
         /// 	Returns current NHibernate session or opens new one.

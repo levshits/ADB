@@ -59,6 +59,7 @@
     <Compile Include="Common\PagingOptions.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Item\BaseItem.cs" />
     <Compile Include="Storage\HttpSessionStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\ThreadSessionStorage.cs" />

@@ -1,22 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Levshits.Logic.Interfaces;
+using Spring.Context;
+using Spring.Context.Support;
 
 namespace Levshits.Logic.Common
 {
     public class CommandBus: ICommandBus
     {
-        public ExecutingResult ExecuteCommand(RequestBase request)
+
+        /// <summary>
+        /// Gets or sets the application context.
+        /// </summary>
+        /// <value>The application context.</value>
+        public IApplicationContext ApplicationContext => ContextRegistry.GetContext();
+
+        private IList<ICommandHandler> _commandHandlers;
+
+        /// <summary>
+        ///     Gets/Sets the list of <see cref="ICommandHandler"/>.
+        /// </summary>
+        public IList<ICommandHandler> CommandHandlers
         {
-            throw new NotImplementedException();
+            get
+            {
+                return _commandHandlers ?? (_commandHandlers = ApplicationContext
+                    .GetObjects<ICommandHandler>()
+                    .Values.OrderByDescending(x => x.Priority)
+                    .ToList());
+            }
+        }
+        public ExecutionResult ExecuteCommand(RequestBase request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+            var handler = CommandHandlers.FirstOrDefault(v => v.SupportedCommands.Contains(request.Id));
+
+            if (handler == null)
+            {
+                throw new NotSupportedException(String.Format("{0} command request is not supported.", request));
+            }
+
+            return handler.Execute(request) ?? new ExecutionResult();
         }
 
-        public ExecitingResult<T> ExecuteCommand<T>(RequestBase request)
+        public ExecutionResult<T> ExecuteCommand<T>(RequestBase request)
         {
-            throw new NotImplementedException();
+            return new ExecutionResult<T>(ExecuteCommand(request));
         }
     }
 }

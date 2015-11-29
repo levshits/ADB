@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Levshits.Data.Entity
+﻿namespace Levshits.Data.Entity
 {
     /// <summary>
     /// Class EntityBase.
@@ -19,16 +17,5 @@ namespace Levshits.Data.Entity
         /// <value>The version.</value>
         public virtual int Version { get; set; }
 
-        /// <summary>
-        /// Gets or sets the create time.
-        /// </summary>
-        /// <value>The create time.</value>
-        public virtual DateTime CreateTime { get; set; }
-
-        /// <summary>
-        /// Gets or sets the modify time.
-        /// </summary>
-        /// <value>The modify time.</value>
-        public virtual  DateTime ModifyTime { get; set; }
     }
 }

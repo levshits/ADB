@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ADB</title>
+    @Styles.Render(BundleConfig.STYLE_BUNDLE_BOOTSTRAP)
+</head>
+<body>
+    <div>
+        <div class="body">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("ADB", "Index", "Client", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                </div>
+            </div>
+            <div class="container body-content">
+                <br/>
+                <br/>
+                <br />
+                <br />
+                <p>@ViewBag.Errors</p>
+                @RenderBody()
+                
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; @DateTime.Now.Year - ADB</p>
+        </div>
+    </footer>
+
+    @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_JQUERY)
+    @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_BOOTSTRAP)
+    @RenderSection("scripts", false)
+</body>
+</html>
+

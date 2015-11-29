@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,10 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blo\CityBlo.cs" />
+    <Compile Include="Blo\ClientBlo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Blo\" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">
+      <Project>{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}</Project>
+      <Name>ADB.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ADB.Data\ADB.Data.csproj">
+      <Project>{64646400-84F1-4B70-ADB4-498CCA0CEDE0}</Project>
+      <Name>ADB.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Levshits.Data\Levshits.Data.csproj">
+      <Project>{096BE68F-D51F-4620-AFF4-304ED4AFA547}</Project>
+      <Name>Levshits.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Levshits.Logic\Levshits.Logic.csproj">
+      <Project>{C071B4B7-811F-45EB-8248-246E95393B9E}</Project>
+      <Name>Levshits.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

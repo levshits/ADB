@@ -1,6 +1,8 @@
-﻿namespace ADB.Common.Requests
+﻿using Levshits.Logic.Common;
+
+namespace ADB.Common.Requests
 {
-    public class SaveClientRequest
+    public class SaveClientRequest: RequestBase
     {
          
     }

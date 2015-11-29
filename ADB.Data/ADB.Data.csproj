@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
       <Private>True</Private>
@@ -54,19 +58,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\AdbDataProvider.cs" />
     <Compile Include="Common\ADBRepository.cs" />
+    <Compile Include="Data\CityData.cs" />
     <Compile Include="Data\ClientData.cs" />
+    <Compile Include="EntityMap\CityEntityMap.cs" />
     <Compile Include="EntityMap\ClientEntityMap.cs" />
+    <Compile Include="Entity\CityEntity.cs" />
     <Compile Include="Entity\ClientEntity.cs" />
+    <Compile Include="Mappers\DtoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">
+      <Project>{4E5D1AA3-2AF2-43FF-A1A0-322D0758F2F5}</Project>
+      <Name>ADB.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Levshits.Data\Levshits.Data.csproj">
       <Project>{096BE68F-D51F-4620-AFF4-304ED4AFA547}</Project>
       <Name>Levshits.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Levshits.Logic\Levshits.Logic.csproj">
+      <Project>{C071B4B7-811F-45EB-8248-246E95393B9E}</Project>
+      <Name>Levshits.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

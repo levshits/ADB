@@ -16,18 +16,6 @@ namespace Levshits.Logic.Dto
         /// </summary>
         /// <value>The version.</value>
         public int Version { get; set; }
-
-        /// <summary>
-        /// Gets or sets the create time.
-        /// </summary>
-        /// <value>The create time.</value>
-        public DateTime CreateTime { get; set; }
-
-        /// <summary>
-        /// Gets or sets the modify time.
-        /// </summary>
-        /// <value>The modify time.</value>
-        public DateTime ModifyTime { get; set; }
          
     }
 }
