@@ -46,7 +46,6 @@ namespace ADB.Web.Models
         /// </summary>
         /// <value>The birth date.</value>
         [Required]
-        [DataType(DataType.Date)]
         [LocalisedName()]
         [UIHint("Date")]
         public virtual DateTime BirthDate { get; set; } = DateTime.Today;
@@ -80,7 +79,6 @@ namespace ADB.Web.Models
         /// </summary>
         /// <value>The issued date.</value>
         [Required]
-        [DataType(DataType.Date)]
         [LocalisedName()]
         [UIHint("Date")]
         public virtual DateTime IssuedDate { get; set; } = DateTime.Today;

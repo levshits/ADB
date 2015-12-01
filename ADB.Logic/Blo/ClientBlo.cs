@@ -46,7 +46,7 @@ namespace ADB.Logic.Blo
             var dto = (ClientDto) request.Value;
             var entity = dto.Id > 0 ? AdbRepository.ClientData.GetEntityById(dto.Id) : CreateEntity();
             Mapper.Map(dto, entity);
-            AdbRepository.ClientData.GetClients(new PagingOptions {ItemsPerPage = 10, Page = 1});
+            entity.Name = $"{dto.LastName} {dto.FirstName} {dto.MiddleName}";
             AdbRepository.ClientData.Save(entity);
             return new ExecutionResult();
         }

@@ -1,5 +1,6 @@
 ﻿using ADB.Data.Entity;
 using FluentNHibernate.Mapping;
+using Levshits.Data.Entity;
 
 namespace ADB.Data.EntityMap
 {
@@ -7,6 +8,7 @@ namespace ADB.Data.EntityMap
     {
         public DepositContractEntityMap()
         {
+            KeyColumn(nameof(BaseEntity.Id));
             Table("DepositContract");
 
             Map(x => x.DepositType);

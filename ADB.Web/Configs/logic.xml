@@ -13,6 +13,10 @@
   <object id="BloBase" type="Levshits.Logic.BloBase" init-method="Init" abstract="true">
     <constructor-arg name="repository" ref="Repository"/>
   </object>
+
+  <!--CityBlo-->
+  <object id="CityBlo" type="ADB.Logic.Blo.CityBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>
   
   <!--ClientBlo-->
   <object id="ClientBlo" type="ADB.Logic.Blo.ClientBlo, ADB.Logic" parent="BloBase" singleton="true">

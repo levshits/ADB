@@ -1,5 +1,6 @@
 ﻿using ADB.Data.Entity;
 using FluentNHibernate.Mapping;
+using Levshits.Data.Entity;
 
 namespace ADB.Data.EntityMap
 {
@@ -7,6 +8,8 @@ namespace ADB.Data.EntityMap
     {
         public ClientEntityMap()
         {
+            KeyColumn(nameof(BaseEntity.Id));
+
             Table("Client");
             Map(x => x.FirstName);
             Map(x => x.MiddleName);
