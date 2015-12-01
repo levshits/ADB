@@ -72,11 +72,18 @@
     <Compile Include="Item\LookupItem.cs" />
     <Compile Include="Item\ClientListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AccountListRequest.cs" />
     <Compile Include="Requests\CityListRequest.cs" />
     <Compile Include="Requests\ClientByIdRequest.cs" />
     <Compile Include="Requests\ClientListRequest.cs" />
+    <Compile Include="Requests\CloseDayRequest.cs" />
+    <Compile Include="Requests\CreditContractRequest.cs" />
     <Compile Include="Requests\DeleteClientByIdRequest.cs" />
+    <Compile Include="Requests\DepositContractRequest.cs" />
+    <Compile Include="Requests\SaveAccountRequest.cs" />
     <Compile Include="Requests\SaveClientRequest.cs" />
+    <Compile Include="Requests\SaveDepositContractRequest.cs" />
+    <Compile Include="Requests\TransactionsHistoryListRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
