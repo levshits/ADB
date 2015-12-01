@@ -3,13 +3,11 @@ using FluentNHibernate.Mapping;
 
 namespace ADB.Data.EntityMap
 {
-    public class ClientEntityMap: ClassMap<ClientEntity>
+    public class ClientEntityMap: SubclassMap<ClientEntity>
     {
         public ClientEntityMap()
         {
             Table("Client");
-            Id(x => x.Id);
-            Version(x => x.Version);
             Map(x => x.FirstName);
             Map(x => x.MiddleName);
             Map(x => x.LastName);

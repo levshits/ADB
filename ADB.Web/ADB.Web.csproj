@@ -187,7 +187,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\LocalisedNameAttribute.cs" />
     <Compile Include="Attributes\TransactionalAttribute.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CashController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\CreditController.cs" />
+    <Compile Include="Controllers\DepositController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -217,6 +221,18 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Data\Levshits.Data.csproj">
+      <Project>{096BE68F-D51F-4620-AFF4-304ED4AFA547}</Project>
+      <Name>Levshits.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Logic\Levshits.Logic.csproj">
+      <Project>{c071b4b7-811f-45eb-8248-246e95393b9e}</Project>
+      <Name>Levshits.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Web.Common\Levshits.Web.Common.csproj">
+      <Project>{7DF9F615-C055-42A7-B699-17EE9A87EE14}</Project>
+      <Name>Levshits.Web.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">
       <Project>{4e5d1aa3-2af2-43ff-a1a0-322d0758f2f5}</Project>
       <Name>ADB.Common</Name>
@@ -228,18 +244,6 @@
     <ProjectReference Include="..\ADB.Logic\ADB.Logic.csproj">
       <Project>{687fabeb-ad99-4943-9015-a77da4d98e30}</Project>
       <Name>ADB.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Levshits.Data\Levshits.Data.csproj">
-      <Project>{096be68f-d51f-4620-aff4-304ed4afa547}</Project>
-      <Name>Levshits.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Levshits.Logic\Levshits.Logic.csproj">
-      <Project>{c071b4b7-811f-45eb-8248-246e95393b9e}</Project>
-      <Name>Levshits.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Levshits.Web.Common\Levshits.Web.Common.csproj">
-      <Project>{7DF9F615-C055-42A7-B699-17EE9A87EE14}</Project>
-      <Name>Levshits.Web.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

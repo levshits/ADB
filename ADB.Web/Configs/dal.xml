@@ -29,11 +29,40 @@
   <object id="CityData" type="ADB.Data.Data.CityData, ADB.Data" parent="BaseData" singleton="true">
     <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
   </object>
+
+  <!--Account data-->
+  <object id="AccountData" type="ADB.Data.Data.AccountData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
+  
+  <!--CreditContract data-->
+  <object id="CreditContractData" type="ADB.Data.Data.CreditContractData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object> 
+  
+  <!--DepositContract data-->
+  <object id="DepositContractData" type="ADB.Data.Data.DepositContractData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object> 
+  <!--TransactionHistory data-->
+  <object id="TransactionHistoryData" type="ADB.Data.Data.TransactionHistoryData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object> 
+  
+  <!--Card data-->
+  <object id="CardData" type="ADB.Data.Data.CardData, ADB.Data" parent="BaseData" singleton="true">
+    <constructor-arg name="dataProvider" ref="AdbDataProvider"/>
+  </object>
   
   <!--Repository-->
   <object id="Repository" type="ADB.Data.Common.AdbRepository" singleton="true">
-    <property name="Client" ref="ClientData"/>
-    <property name="City" ref="CityData"/>
+    <property name="ClientData" ref="ClientData"/>
+    <property name="CityData" ref="CityData"/>
+    <property name="AccountData" ref="AccountData"/>
+    <property name="CreditContractData" ref="CreditContractData"/>
+    <property name="DepositContractData" ref="DepositContractData"/>
+    <property name="TransactionHistoryData" ref="TransactionHistoryData"/>
+    <property name="CardData" ref="CardData"/>
   </object>
   
   

@@ -28,34 +28,34 @@ namespace ADB.Logic.Blo
             RegisterCommand<DeleteClientByIdRequest>(DeleteClientById);
         }
 
-        private ExecutionResult DeleteClientById(DeleteClientByIdRequest request)
+        private ExecutionResult DeleteClientById(DeleteClientByIdRequest request, ExecutionContext context)
         {
-            AdbRepository.Client.Delete(request.Value);
+            AdbRepository.ClientData.Delete(request.Value);
             return new ExecutionResult();
         }
 
-        private ExecutionResult<ClientDto> GetClientById(ClientByIdRequest request)
+        private ExecutionResult<ClientDto> GetClientById(ClientByIdRequest request, ExecutionContext context)
         {
-            var entity = AdbRepository.Client.GetEntityById(request.Value);
+            var entity = AdbRepository.ClientData.GetEntityById(request.Value);
             return new ExecutionResult<ClientDto>() {TypedResult = Mapper.Map<ClientDto>(entity)};
         }
 
 
-        public ExecutionResult SaveClientEntity(SaveClientRequest request)
+        public ExecutionResult SaveClientEntity(SaveClientRequest request, ExecutionContext context)
         {
             var dto = (ClientDto) request.Value;
-            var entity = dto.Id > 0 ? AdbRepository.Client.GetEntityById(dto.Id) : CreateEntity();
+            var entity = dto.Id > 0 ? AdbRepository.ClientData.GetEntityById(dto.Id) : CreateEntity();
             Mapper.Map(dto, entity);
-            AdbRepository.Client.GetClients(new PagingOptions {ItemsPerPage = 10, Page = 1});
-            AdbRepository.Client.Save(entity);
+            AdbRepository.ClientData.GetClients(new PagingOptions {ItemsPerPage = 10, Page = 1});
+            AdbRepository.ClientData.Save(entity);
             return new ExecutionResult();
         }
 
-        public ExecutionResult<IList<ClientListItem>> GetClientListItems(ClientListRequest request)
+        public ExecutionResult<IList<ClientListItem>> GetClientListItems(ClientListRequest request, ExecutionContext context)
         {
             return new ExecutionResult<IList<ClientListItem>>
             {
-                TypedResult = AdbRepository.Client.GetClients(request.Paging)
+                TypedResult = AdbRepository.ClientData.GetClients(request.Paging)
             };
         }
     }

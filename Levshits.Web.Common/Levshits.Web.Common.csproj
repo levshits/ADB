@@ -78,16 +78,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Levshits.Data\Levshits.Data.csproj">
-      <Project>{096BE68F-D51F-4620-AFF4-304ED4AFA547}</Project>
-      <Name>Levshits.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Levshits.Logic\Levshits.Logic.csproj">
-      <Project>{C071B4B7-811F-45EB-8248-246E95393B9E}</Project>
-      <Name>Levshits.Logic</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,12 +13,11 @@ namespace ADB.Web.Controllers
 {
     public class ClientController: BaseController
     {
-        public string Text { get; set; }
         public override ActionResult Index()
         {
             var result = CommandBus.ExecuteCommand<IList<ClientListItem>>(new ClientListRequest {Paging = new PagingOptions()});
 
-            var model = Mapper.Map<List<ClientListItemModel>>(result.TypedResult);
+            var model = Mapper.Map<List<ClientListItemModel>>(result.TypedResult) ?? new List<ClientListItemModel>();
             return View(model);
         }
 

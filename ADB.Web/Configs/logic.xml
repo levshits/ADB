@@ -18,7 +18,23 @@
   <object id="ClientBlo" type="ADB.Logic.Blo.ClientBlo, ADB.Logic" parent="BloBase" singleton="true">
   </object>
 
-  <!--CityBlo-->
-  <object id="CityBlo" type="ADB.Logic.Blo.CityBlo, ADB.Logic" parent="BloBase" singleton="true">
+  <!--CardBlo-->
+  <object id="CardBlo" type="ADB.Logic.Blo.CardBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>  
+  
+  <!--AccountBlo-->
+  <object id="AccountBlo" type="ADB.Logic.Blo.AccountBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>  
+  
+  <!--CreditContractBlo-->
+  <object id="CreditContractBlo" type="ADB.Logic.Blo.CreditContractBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object> 
+  
+  <!--DepositContractBlo-->
+  <object id="DepositContractBlo" type="ADB.Logic.Blo.DepositContractBlo, ADB.Logic" parent="BloBase" singleton="true">
+  </object>  
+  
+  <!--TransactionHistoryBloBlo-->
+  <object id="TransactionHistoryBlo" type="ADB.Logic.Blo.TransactionHistoryBlo, ADB.Logic" parent="BloBase" singleton="true">
   </object>
 </objects>

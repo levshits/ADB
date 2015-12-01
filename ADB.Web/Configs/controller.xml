@@ -7,6 +7,5 @@
     <property name="CommandBus" ref="TransactionalCommandBus"/>
   </object>
   <object id="ClientController" type="ADB.Web.Controllers.ClientController, ADB.Web" parent="BaseController" singleton="false">
-    <property name="Text" value="Blo"/>
   </object>
 </objects>

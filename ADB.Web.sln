@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB.Common", "ADB.Common\AD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADB.Logic", "ADB.Logic\ADB.Logic.csproj", "{687FABEB-AD99-4943-9015-A77DA4D98E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Data", "Levshits.Data\Levshits.Data.csproj", "{096BE68F-D51F-4620-AFF4-304ED4AFA547}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Levshits.Libraries", "Levshits.Libraries", "{953AA73C-3FFD-4AAD-89A3-6FC5CA8B0D48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Logic", "Levshits.Logic\Levshits.Logic.csproj", "{C071B4B7-811F-45EB-8248-246E95393B9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Data", "..\Levshits.Libraries\Levshits.Data\Levshits.Data.csproj", "{096BE68F-D51F-4620-AFF4-304ED4AFA547}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Web.Common", "Levshits.Web.Common\Levshits.Web.Common.csproj", "{7DF9F615-C055-42A7-B699-17EE9A87EE14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Logic", "..\Levshits.Libraries\Levshits.Logic\Levshits.Logic.csproj", "{C071B4B7-811F-45EB-8248-246E95393B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Levshits.Web.Common", "..\Levshits.Libraries\Levshits.Web.Common\Levshits.Web.Common.csproj", "{7DF9F615-C055-42A7-B699-17EE9A87EE14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +56,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{096BE68F-D51F-4620-AFF4-304ED4AFA547} = {953AA73C-3FFD-4AAD-89A3-6FC5CA8B0D48}
+		{C071B4B7-811F-45EB-8248-246E95393B9E} = {953AA73C-3FFD-4AAD-89A3-6FC5CA8B0D48}
+		{7DF9F615-C055-42A7-B699-17EE9A87EE14} = {953AA73C-3FFD-4AAD-89A3-6FC5CA8B0D48}
 	EndGlobalSection
 EndGlobal

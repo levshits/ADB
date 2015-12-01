@@ -2,13 +2,10 @@
 
 namespace ADB.Data.Entity
 {
-    /// <summary>
-    /// Class CityEntity.
-    /// </summary>
-    public class CityEntity: BaseEntity
+    public class PrincipalEntity : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the name.
+        ///     Gets or sets the name.
         /// </summary>
         /// <value>The name.</value>
         public virtual string Name { get; set; }
