@@ -34,6 +34,14 @@
       <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Levshits.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libraries\Levshits.Libraries\Levshits.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Levshits.Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libraries\Levshits.Libraries\Levshits.Logic.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,16 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Data\Levshits.Data.csproj">
-      <Project>{096be68f-d51f-4620-aff4-304ed4afa547}</Project>
-      <Name>Levshits.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Logic\Levshits.Logic.csproj">
-      <Project>{c071b4b7-811f-45eb-8248-246e95393b9e}</Project>
-      <Name>Levshits.Logic</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

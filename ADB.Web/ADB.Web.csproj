@@ -60,6 +60,18 @@
       <HintPath>..\packages\Common.Logging.Core.3.3.0\lib\net40\Common.Logging.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Levshits.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libraries\Levshits.Libraries\Levshits.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Levshits.Logic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libraries\Levshits.Libraries\Levshits.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Levshits.Web.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libraries\Levshits.Libraries\Levshits.Web.Common.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
       <Private>True</Private>
@@ -221,18 +233,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Data\Levshits.Data.csproj">
-      <Project>{096BE68F-D51F-4620-AFF4-304ED4AFA547}</Project>
-      <Name>Levshits.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Logic\Levshits.Logic.csproj">
-      <Project>{c071b4b7-811f-45eb-8248-246e95393b9e}</Project>
-      <Name>Levshits.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Levshits.Libraries\Levshits.Web.Common\Levshits.Web.Common.csproj">
-      <Project>{7DF9F615-C055-42A7-B699-17EE9A87EE14}</Project>
-      <Name>Levshits.Web.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">
       <Project>{4e5d1aa3-2af2-43ff-a1a0-322d0758f2f5}</Project>
       <Name>ADB.Common</Name>
