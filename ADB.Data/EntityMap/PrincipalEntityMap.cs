@@ -10,7 +10,10 @@ namespace ADB.Data.EntityMap
             Table("Principal");
             Id(x => x.Id);
             Version(x => x.Version);
+
             Map(x => x.Name).Length(600);
+
+            HasMany(x => x.AccountEntities).Cascade.Delete();
         }    
     }
 }

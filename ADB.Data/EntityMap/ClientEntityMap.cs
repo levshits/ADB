@@ -35,6 +35,9 @@ namespace ADB.Data.EntityMap
 
             References(v => v.ResidenceCity).Column("ResidenceCityId").ReadOnly();
 
+            HasMany(x => x.CreditContractEntities).Cascade.Delete();
+            HasMany(x => x.DepositContractEntities).Cascade.Delete();
+            HasMany(x => x.CardEntities).Cascade.Delete();
         }
     }
 }

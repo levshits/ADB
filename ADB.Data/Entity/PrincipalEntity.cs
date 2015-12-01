@@ -1,4 +1,5 @@
-﻿using Levshits.Data.Entity;
+﻿using System.Collections.Generic;
+using Levshits.Data.Entity;
 
 namespace ADB.Data.Entity
 {
@@ -9,5 +10,7 @@ namespace ADB.Data.Entity
         /// </summary>
         /// <value>The name.</value>
         public virtual string Name { get; set; }
+
+        public virtual IList<AccountEntity> AccountEntities { get; set; }
     }
 }

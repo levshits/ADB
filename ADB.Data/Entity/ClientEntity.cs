@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ADB.Data.Entity
 {
@@ -150,5 +151,9 @@ namespace ADB.Data.Entity
         /// </summary>
         /// <value><c>true</c> if this instance is retired; otherwise, <c>false</c>.</value>
         public virtual bool IsRetired { get; set; }
+
+        public virtual IList<CardEntity> CardEntities { get; set; }
+        public virtual IList<CreditContractEntity> CreditContractEntities { get; set; }
+        public virtual IList<DepositContractEntity> DepositContractEntities { get; set; } 
     }
 }
