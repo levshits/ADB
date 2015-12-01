@@ -52,8 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\AccountDto.cs" />
     <Compile Include="Dto\CityDto.cs" />
     <Compile Include="Dto\ClientDto.cs" />
+    <Compile Include="Dto\ContractDto.cs" />
+    <Compile Include="Dto\CreditContractDto.cs" />
+    <Compile Include="Dto\DepositContractDto.cs" />
+    <Compile Include="Dto\TransactionHistoryDto.cs" />
     <Compile Include="Immutable\ActivityTypeEnum.cs" />
     <Compile Include="Immutable\ContractTypeEnum.cs" />
     <Compile Include="Immutable\CreditContractType.cs" />
