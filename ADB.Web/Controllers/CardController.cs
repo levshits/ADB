@@ -2,7 +2,7 @@
 
 namespace ADB.Web.Controllers
 {
-    public class AccountController: BaseController
+    public class CardController: BaseController
     {
          
     }

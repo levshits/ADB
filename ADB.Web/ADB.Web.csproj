@@ -211,6 +211,7 @@
     <Compile Include="Attributes\LocalisedNameAttribute.cs" />
     <Compile Include="Attributes\TransactionalAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\CashController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\CreditController.cs" />

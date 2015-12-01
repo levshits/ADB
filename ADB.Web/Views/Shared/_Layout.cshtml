@@ -17,7 +17,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        @Html.ActionLink("ADB", "Index", "Client", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("ADB", "Index", "Client", new {area = ""}, new {@class = "navbar-brand"})
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Клиенты", "Index", "Client")</li>
+                            <li>@Html.ActionLink("Счета", "Index", "Account")</li>
+                            <li>@Html.ActionLink("Депозиты", "Index", "Deposit")</li>
+                            <li>@Html.ActionLink("Кредиты", "Index", "Credit")</li>
+                            <li>@Html.ActionLink("Карты", "Index", "Card")</li>
+                        </ul>
                     </div>
                 </div>
             </div>
