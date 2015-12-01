@@ -164,6 +164,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\bootstrap\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker3.standalone.min.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -177,6 +185,9 @@
     <Content Include="Content\bootstrap\bootstrap.css.map" />
     <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\ADB\js-common.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.min.map" />
@@ -230,6 +241,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Date.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Date.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

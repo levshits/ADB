@@ -224,5 +224,7 @@ else
 <div class="col-lg-offset-2 col-lg-8">
     @Html.ActionLink("Вернуться к списку", "Index")
 </div>
-
-@Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_JQUERY_VALIDATE)
+@section Scripts
+{
+    @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_JQUERY_VALIDATE)
+}

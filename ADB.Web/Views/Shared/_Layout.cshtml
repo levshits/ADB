@@ -42,7 +42,13 @@
 
     @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_JQUERY)
     @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_BOOTSTRAP)
-    @RenderSection("scripts", false)
+    @Scripts.Render(BundleConfig.SCRIPTS_BUNDLE_ADB_COMMON)
+    @RenderSection("Scripts", false)
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.levshits.adb.common.init();
+    });
+</script>
 </body>
 </html>
 
