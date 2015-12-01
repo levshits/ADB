@@ -59,9 +59,9 @@
     <Compile Include="Immutable\CreditContractType.cs" />
     <Compile Include="Immutable\CurrencyTypeEnum.cs" />
     <Compile Include="Immutable\DepositContractType.cs" />
-    <Compile Include="Immutable\DisabilityStatus.cs" />
-    <Compile Include="Immutable\MaritalStatus.cs" />
-    <Compile Include="Immutable\Nationality.cs" />
+    <Compile Include="Immutable\DisabilityStatusEnum.cs" />
+    <Compile Include="Immutable\MaritalStatusEnum.cs" />
+    <Compile Include="Immutable\NationalityEnum.cs" />
     <Compile Include="Immutable\PriorityLevels.cs" />
     <Compile Include="Immutable\UserTypeEnum.cs" />
     <Compile Include="Item\LookupItem.cs" />

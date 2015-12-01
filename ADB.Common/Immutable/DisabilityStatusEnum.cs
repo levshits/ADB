@@ -1,6 +1,6 @@
 ﻿namespace ADB.Common.Immutable
 {
-    public enum DisabilityStatus
+    public enum DisabilityStatusEnum
     {
         None=200000,
         FirstLevel=200001,

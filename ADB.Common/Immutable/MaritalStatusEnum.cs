@@ -1,6 +1,6 @@
 ﻿namespace ADB.Common.Immutable
 {
-    public enum MaritalStatus
+    public enum MaritalStatusEnum
     {
         Single=100001,
         Married=100002,

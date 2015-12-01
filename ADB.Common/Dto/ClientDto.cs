@@ -102,17 +102,17 @@ namespace ADB.Common.Dto
         /// Gets or sets the marital status.
         /// </summary>
         /// <value>The marital status.</value>
-        public virtual MaritalStatus MaritalStatus { get; set; }
+        public virtual MaritalStatusEnum MaritalStatus { get; set; }
         /// <summary>
         /// Gets or sets the nationality.
         /// </summary>
         /// <value>The nationality.</value>
-        public virtual Nationality Nationality { get; set; }
+        public virtual NationalityEnum Nationality { get; set; }
         /// <summary>
         /// Gets or sets the disability status.
         /// </summary>
         /// <value>The disability status.</value>
-        public virtual DisabilityStatus DisabilityStatus { get; set; }
+        public virtual DisabilityStatusEnum DisabilityStatus { get; set; }
         /// <summary>
         /// Gets or sets the monthly income.
         /// </summary>
