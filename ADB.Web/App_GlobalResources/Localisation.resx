@@ -213,4 +213,49 @@
   <data name="ThirdLevel" xml:space="preserve">
     <value>Третья группа</value>
   </data>
+  <data name="Active" xml:space="preserve">
+    <value>Активный</value>
+  </data>
+  <data name="ActivePassive" xml:space="preserve">
+    <value>Активно-пассивный</value>
+  </data>
+  <data name="BusinessmanUserTypeEnum" xml:space="preserve">
+    <value>Индивидуальный предприниматель</value>
+  </data>
+  <data name="BYR" xml:space="preserve">
+    <value>BYR</value>
+  </data>
+  <data name="CreditContract" xml:space="preserve">
+    <value>Кредит</value>
+  </data>
+  <data name="CreditType1" xml:space="preserve">
+    <value>Тип 1</value>
+  </data>
+  <data name="CreditType2" xml:space="preserve">
+    <value>Тип 2</value>
+  </data>
+  <data name="DepositContract" xml:space="preserve">
+    <value>Депозит</value>
+  </data>
+  <data name="DepositType1" xml:space="preserve">
+    <value>Тип 1</value>
+  </data>
+  <data name="DepositType2" xml:space="preserve">
+    <value>Тип 2</value>
+  </data>
+  <data name="EUR" xml:space="preserve">
+    <value>EUR</value>
+  </data>
+  <data name="OrganisationUserTypeEnum" xml:space="preserve">
+    <value>Юридическое лицо</value>
+  </data>
+  <data name="Passive" xml:space="preserve">
+    <value>Пассивный</value>
+  </data>
+  <data name="PersonUserTypeEnum" xml:space="preserve">
+    <value>Физическое лицо</value>
+  </data>
+  <data name="USD" xml:space="preserve">
+    <value>USD</value>
+  </data>
 </root>
