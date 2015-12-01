@@ -209,9 +209,12 @@
     </Compile>
     <Compile Include="Models\ClientListItemModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="Models\Enumerations\ContractTypeEnum.cs" />
+    <Compile Include="Models\Enumerations\CurrencyTypeEnum.cs" />
     <Compile Include="Models\Enumerations\DisabilityStatus.cs" />
     <Compile Include="Models\Enumerations\MaritalStatus.cs" />
     <Compile Include="Models\Enumerations\Nationality.cs" />
+    <Compile Include="Models\Enumerations\UserTypeEnum.cs" />
     <Compile Include="Models\ModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

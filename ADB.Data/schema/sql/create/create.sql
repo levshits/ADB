@@ -1,76 +1,76 @@
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Account_Principal]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Account_Principal]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Account] DROP CONSTRAINT [FK_Account_Principal]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Card_Account]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Card_Account]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Card] DROP CONSTRAINT [FK_Card_Account]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Card_Client]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Card_Client]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Card] DROP CONSTRAINT [FK_Card_Client]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Client_Principal]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Client_Principal]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Client] DROP CONSTRAINT [FK_Client_Principal]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_ResidenceCity]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_ResidenceCity]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Client] DROP CONSTRAINT [FK_ResidenceCity]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Contract_Client]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_Contract_Client]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [Contract] DROP CONSTRAINT [FK_Contract_Client]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_CreditContract_Contract]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_CreditContract_Contract]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [CreditContract] DROP CONSTRAINT [FK_CreditContract_Contract]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_DepositContract_Contract]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_DepositContract_Contract]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [DepositContract] DROP CONSTRAINT [FK_DepositContract_Contract]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_TransactionHistory_Account]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_TransactionHistory_Account]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [TransactionHistory] DROP CONSTRAINT [FK_TransactionHistory_Account]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_TransactionHistory_Account_02]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[FK_TransactionHistory_Account_02]') AND OBJECTPROPERTY(id, 'IsForeignKey') = 1)
 ALTER TABLE [TransactionHistory] DROP CONSTRAINT [FK_TransactionHistory_Account_02]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Account]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Account]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [Account]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Card]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Card]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [Card]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[City]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[City]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [City]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Client]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Client]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [Client]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Contract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Contract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [Contract]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[CreditContract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[CreditContract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [CreditContract]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[DepositContract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[DepositContract]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [DepositContract]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Principal]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[Principal]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [Principal]
 ;
 
-IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[TransactionHistory]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1) 
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id('[TransactionHistory]') AND OBJECTPROPERTY(id, 'IsUserTable') = 1)
 DROP TABLE [TransactionHistory]
 ;
 
@@ -89,7 +89,7 @@ CREATE TABLE [Account]
 
 CREATE TABLE [Card]
 (
-	[Id] int NOT NULL,
+	[Id] int NOT NULL IDENTITY (1, 1),
 	[Number] varchar(16) NOT NULL,
 	[ClientId] int NOT NULL,
 	[AccountId] int NOT NULL
@@ -136,7 +136,7 @@ CREATE TABLE [Client]
 
 CREATE TABLE [Contract]
 (
-	[Id] int NOT NULL,
+	[Id] int NOT NULL IDENTITY (1, 1),
 	[AssignDate] varchar(50) NOT NULL,
 	[PrincipalId] int NOT NULL,
 	[ContractType] smallint NOT NULL
@@ -145,7 +145,7 @@ CREATE TABLE [Contract]
 
 CREATE TABLE [CreditContract]
 (
-	[Id] int NOT NULL,
+	[Id] int NOT NULL IDENTITY (1, 1),
 	[CreditType] smallint NOT NULL,
 	[Percent] float NOT NULL,
 	[MainAccountId] int NOT NULL,
@@ -170,7 +170,7 @@ CREATE TABLE [DepositContract]
 
 CREATE TABLE [Principal]
 (
-	[Id] int NOT NULL,
+	[Id] int NOT NULL IDENTITY (1, 1),
 	[Version] int NOT NULL,
 	[Name] varchar(50)
 )
@@ -178,7 +178,7 @@ CREATE TABLE [Principal]
 
 CREATE TABLE [TransactionHistory]
 (
-	[Id] int NOT NULL,
+	[Id] int NOT NULL IDENTITY (1, 1),
 	[CreateTime] datetime NOT NULL,
 	[Version] int NOT NULL,
 	[FromAccount] int NOT NULL,
@@ -188,95 +188,95 @@ CREATE TABLE [TransactionHistory]
 )
 ;
 
-CREATE INDEX [IXFK_Account_Principal] 
+CREATE INDEX [IXFK_Account_Principal]
  ON [Account] ([OwnerId] ASC)
 ;
 
-ALTER TABLE [Account] 
+ALTER TABLE [Account]
  ADD CONSTRAINT [PK_Account]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-CREATE INDEX [IXFK_Card_Account] 
+CREATE INDEX [IXFK_Card_Account]
  ON [Card] ([AccountId] ASC)
 ;
 
-CREATE INDEX [IXFK_Card_Client] 
+CREATE INDEX [IXFK_Card_Client]
  ON [Card] ([ClientId] ASC)
 ;
 
-ALTER TABLE [Card] 
- ADD CONSTRAINT [PK_Table1]
+ALTER TABLE [Card]
+ ADD CONSTRAINT [PK_Card]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-ALTER TABLE [City] 
+ALTER TABLE [City]
  ADD CONSTRAINT [PK_City]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-ALTER TABLE [City] 
+ALTER TABLE [City]
  ADD CONSTRAINT [UK_Name] UNIQUE NONCLUSTERED ([Name])
 ;
 
-CREATE INDEX [IXFK_Client_Principal] 
+CREATE INDEX [IXFK_Client_Principal]
  ON [Client] ([Id] ASC)
 ;
 
-ALTER TABLE [Client] 
+ALTER TABLE [Client]
  ADD CONSTRAINT [PK_Client]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-ALTER TABLE [Client] 
+ALTER TABLE [Client]
  ADD CONSTRAINT [UK_PassportNumber] UNIQUE NONCLUSTERED ([PassportNumber],[PassportSeries])
 ;
 
-ALTER TABLE [Client] 
+ALTER TABLE [Client]
  ADD CONSTRAINT [UK_PassportId] UNIQUE NONCLUSTERED ([PassportId])
 ;
 
-CREATE INDEX [IXFK_Contract_Client] 
+CREATE INDEX [IXFK_Contract_Client]
  ON [Contract] ([PrincipalId] ASC)
 ;
 
-ALTER TABLE [Contract] 
+ALTER TABLE [Contract]
  ADD CONSTRAINT [PK_Contract]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-CREATE INDEX [IXFK_CreditContract_Contract] 
+CREATE INDEX [IXFK_CreditContract_Contract]
  ON [CreditContract] ([Id] ASC)
 ;
 
-ALTER TABLE [CreditContract] 
- ADD CONSTRAINT [PK_Table1]
+ALTER TABLE [CreditContract]
+ ADD CONSTRAINT [PK_CreditContract]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-CREATE INDEX [IXFK_DepositContract_Contract] 
+CREATE INDEX [IXFK_DepositContract_Contract]
  ON [DepositContract] ([Id] ASC)
 ;
 
-ALTER TABLE [DepositContract] 
- ADD CONSTRAINT [PK_Table1]
+ALTER TABLE [DepositContract]
+ ADD CONSTRAINT [PK_DepositContract]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-CREATE INDEX [IXFK_Principal_Client] 
+CREATE INDEX [IXFK_Principal_Client]
  ON [Principal] ([Id] ASC)
 ;
 
-ALTER TABLE [Principal] 
- ADD CONSTRAINT [PK_Table1]
+ALTER TABLE [Principal]
+ ADD CONSTRAINT [PK_Principal]
 	PRIMARY KEY CLUSTERED ([Id])
 ;
 
-CREATE INDEX [IXFK_TransactionHistory_Account] 
+CREATE INDEX [IXFK_TransactionHistory_Account]
  ON [TransactionHistory] ([FromAccount] ASC)
 ;
 
-CREATE INDEX [IXFK_TransactionHistory_Account_02] 
+CREATE INDEX [IXFK_TransactionHistory_Account_02]
  ON [TransactionHistory] ([ToAccount] ASC)
 ;
 
