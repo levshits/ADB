@@ -258,4 +258,16 @@
   <data name="USD" xml:space="preserve">
     <value>USD</value>
   </data>
+  <data name="CreditType" xml:space="preserve">
+    <value>Тип кредита</value>
+  </data>
+  <data name="DepositType" xml:space="preserve">
+    <value>Тип депозита</value>
+  </data>
+  <data name="Summ" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Идентификатор</value>
+  </data>
 </root>

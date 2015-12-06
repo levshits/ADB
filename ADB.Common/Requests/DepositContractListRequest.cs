@@ -3,7 +3,7 @@ using Levshits.Logic.Common;
 
 namespace ADB.Common.Requests
 {
-    public class AccountListRequest: RequestBase
+    public class DepositContractListRequest: RequestBase
     {
         public PagingOptions Paging { get; set; }
     }

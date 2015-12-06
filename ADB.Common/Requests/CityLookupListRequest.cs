@@ -2,7 +2,7 @@
 
 namespace ADB.Common.Requests
 {
-    public class CityListRequest: RequestBase
+    public class CityLookupListRequest: RequestBase
     {
          
     }

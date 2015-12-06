@@ -58,7 +58,7 @@ namespace ADB.Web.Controllers
 
         private void InitializeModel(ClientModel model)
         {
-            var cities = CommandBus.ExecuteCommand<IList<LookupItem>>(new CityListRequest());
+            var cities = CommandBus.ExecuteCommand<IList<LookupItem>>(new CityLookupListRequest());
             model.ResidenceSities = cities.TypedResult ?? new List<LookupItem>();
         }
 

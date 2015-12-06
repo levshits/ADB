@@ -2,7 +2,7 @@
 
 namespace ADB.Common.Requests
 {
-    public class DepositContractRequest: RequestBase
+    public class AccountRequest:  RequestBase
     {
          
     }

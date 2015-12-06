@@ -18,14 +18,14 @@ namespace ADB.Logic.Blo
         {
         }
 
-        public ExecutionResult<IList<LookupItem>> GetClientListItems(CityListRequest request, ExecutionContext context)
+        public ExecutionResult<IList<LookupItem>> GetClientListItems(CityLookupListRequest request, ExecutionContext context)
         {
             return new ExecutionResult<IList<LookupItem>> {TypedResult = AdbRepository.CityData.Cities()};
         }
 
         public override void Init()
         {
-            RegisterCommand<CityListRequest>(GetClientListItems);
+            RegisterCommand<CityLookupListRequest>(GetClientListItems);
         }
 
        

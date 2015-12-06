@@ -26,6 +26,7 @@ namespace ADB.Logic.Blo
             RegisterCommand<ClientListRequest>(GetClientListItems);
             RegisterCommand<ClientByIdRequest>(GetClientById);
             RegisterCommand<DeleteClientByIdRequest>(DeleteClientById);
+            RegisterCommand<ClientLookupListRequest>(GetClientLookupListItems);
         }
 
         private ExecutionResult DeleteClientById(DeleteClientByIdRequest request, ExecutionContext context)
@@ -56,6 +57,14 @@ namespace ADB.Logic.Blo
             return new ExecutionResult<IList<ClientListItem>>
             {
                 TypedResult = AdbRepository.ClientData.GetClients(request.Paging)
+            };
+        }
+
+        public ExecutionResult<IList<LookupItem>> GetClientLookupListItems(ClientLookupListRequest request, ExecutionContext context)
+        {
+            return new ExecutionResult<IList<LookupItem>>
+            {
+                TypedResult = AdbRepository.ClientData.GetClientsLookup()
             };
         }
     }

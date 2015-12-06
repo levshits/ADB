@@ -133,6 +133,15 @@ namespace ADB.Web.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Тип кредита.
+        /// </summary>
+        public static string CreditType {
+            get {
+                return ResourceManager.GetString("CreditType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Тип 1.
         /// </summary>
         public static string CreditType1 {
@@ -156,6 +165,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string DepositContract {
             get {
                 return ResourceManager.GetString("DepositContract", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип депозита.
+        /// </summary>
+        public static string DepositType {
+            get {
+                return ResourceManager.GetString("DepositType", resourceCulture);
             }
         }
         
@@ -237,6 +255,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string HomePhone {
             get {
                 return ResourceManager.GetString("HomePhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Идентификатор.
+        /// </summary>
+        public static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
             }
         }
         
@@ -462,6 +489,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string Single {
             get {
                 return ResourceManager.GetString("Single", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сумма.
+        /// </summary>
+        public static string Summ {
+            get {
+                return ResourceManager.GetString("Summ", resourceCulture);
             }
         }
         

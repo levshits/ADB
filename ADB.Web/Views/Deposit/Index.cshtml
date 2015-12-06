@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ADB.Web.Models.DepositContractListItemModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Депозиты</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepositType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Summ)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepositType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Summ)
+        </td>
+    </tr>
+}
+
+</table>

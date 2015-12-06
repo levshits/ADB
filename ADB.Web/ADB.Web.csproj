@@ -219,9 +219,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountListItemModel.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ClientListItemModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="Models\CreditContractListItemModel.cs" />
+    <Compile Include="Models\DepositContractListItemModel.cs" />
+    <Compile Include="Models\CreditContractModel.cs" />
+    <Compile Include="Models\DepositContractModel.cs" />
     <Compile Include="Models\Enumerations\ActivityTypeEnum.cs" />
+    <Compile Include="Models\ContractModel.cs" />
     <Compile Include="Models\Enumerations\ContractTypeEnum.cs" />
     <Compile Include="Models\Enumerations\CreditContractType.cs" />
     <Compile Include="Models\Enumerations\CurrencyTypeEnum.cs" />
@@ -244,6 +251,9 @@
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Date.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Date.cshtml" />
+    <Content Include="Views\Deposit\Index.cshtml" />
+    <Content Include="Views\Credit\Index.cshtml" />
+    <Content Include="Views\Deposit\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -253,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">

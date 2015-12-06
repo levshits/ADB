@@ -30,5 +30,17 @@ namespace ADB.Data.Data
             query.Select(projections);
             return query.TransformUsing(Transformers.AliasToBean<ClientListItem>()).List<ClientListItem>();
         }
+
+        public IList<LookupItem> GetClientsLookup()
+        {
+            ClientEntity client = null;
+            LookupItem clientListItem = null;
+            var query = DataProvider.QueryOver(() => client);
+            var projections = Projections.ProjectionList();
+            projections.Add(Projections.Property(() => client.Id).WithAlias(() => clientListItem.Id));
+            projections.Add(Projections.Property(() => client.Name).WithAlias(() => clientListItem.Value));
+            query.Select(projections);
+            return query.TransformUsing(Transformers.AliasToBean<LookupItem>()).List<LookupItem>();
+        }
     }
 }
