@@ -17,9 +17,10 @@ namespace ADB.Data.EntityMap
             Map(x => x.PercentAccountId);
             Map(x => x.Period);
             Map(x => x.Summ);
+            Map(x => x.PercentValue);
 
-            References(x => x.MainAccountIdObject).Column(nameof(CreditContractEntity.MainAccountId)).Cascade.None();
-            References(x => x.PersentAccountIdObject).Column(nameof(CreditContractEntity.PercentAccountId)).Cascade.None();
+            References(x => x.MainAccountIdObject).Column(nameof(CreditContractEntity.MainAccountId)).Cascade.None().ReadOnly();
+            References(x => x.PercentAccountIdObject).Column(nameof(CreditContractEntity.PercentAccountId)).Cascade.None().ReadOnly();
         }
          
     }

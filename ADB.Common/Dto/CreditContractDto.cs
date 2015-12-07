@@ -29,10 +29,10 @@ namespace ADB.Common.Dto
         public virtual int PercentAccountId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the persent account identifier object.
+        ///     Gets or sets the Percent account identifier object.
         /// </summary>
-        /// <value>The persent account identifier object.</value>
-        public virtual string PersentAccount { get; set; }
+        /// <value>The Percent account identifier object.</value>
+        public virtual string PercentAccount { get; set; }
 
         /// <summary>
         ///     Gets or sets the period.
@@ -51,5 +51,6 @@ namespace ADB.Common.Dto
         /// </summary>
         /// <value>The summ.</value>
         public virtual decimal Summ { get; set; }
+        public virtual decimal PercentValue { get; set; }
     }
 }

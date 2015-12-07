@@ -28,6 +28,6 @@ namespace ADB.Data.Entity
         /// Gets or sets the type of the contract.
         /// </summary>
         /// <value>The type of the contract.</value>
-        public virtual ContractTypeEnum ContractType { get; set; }
+        public virtual int ContractType { get; set; }
     }
 }

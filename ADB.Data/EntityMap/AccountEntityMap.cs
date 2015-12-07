@@ -16,9 +16,9 @@ namespace ADB.Data.EntityMap
             Map(x => x.Balance);
             Map(x => x.CurrencyType);
             Map(x => x.UserType);
-            Map(x => x.PrincipalId);
+            Map(x => x.OwnerId);
 
-            References(x => x.PrincipalIdObject).Column(nameof(AccountEntity.PrincipalId)).ReadOnly();
+            References(x => x.OwnerIdObject).Column(nameof(AccountEntity.OwnerId)).ReadOnly();
         }
     }
 }

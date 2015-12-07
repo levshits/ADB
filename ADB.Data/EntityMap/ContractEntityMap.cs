@@ -7,6 +7,7 @@ namespace ADB.Data.EntityMap
     {
         public ContractEntityMap()
         {
+            Table("Contract");
             Id(x => x.Id);
             Map(x => x.AssignDate);
             Map(x => x.ContractType);

@@ -1,6 +1,8 @@
-﻿using ADB.Common.Dto;
+﻿using System;
+using ADB.Common.Dto;
 using ADB.Common.Immutable;
 using ADB.Common.Requests;
+using ADB.Data.Common;
 using ADB.Data.Entity;
 using Levshits.Logic;
 using Levshits.Logic.Common;
@@ -19,69 +21,85 @@ namespace ADB.Logic.Blo
             RegisterCommand<SaveDepositContractRequest>(CreateDepositeContract);
         }
 
+        public AdbRepository AdbRepository => (AdbRepository) Repository;
+
         public ExecutionResult CreateCreditContract(SaveCreditContractRequest request, ExecutionContext context)
         {
             ExecutionResult<CreditContractEntity> result = context.PreviousResult as ExecutionResult<CreditContractEntity>;
-            if (result == null)
-                return null;
+            result = result ?? new ExecutionResult<CreditContractEntity>();
             CreditContractDto dto = request.Value as CreditContractDto;
 
             if (dto == null)
                 return null;
 
-            result.TypedResult.MainAccountIdObject = new AccountEntity()
+            var mainAccount = new AccountEntity()
             {
                 Balance = 0,
-                ActivityType = ActivityTypeEnum.Passive,
-                CurrencyType = dto.CurrencyType,
-                PrincipalId = dto.PrincipalId,
-                AccountId = GetAccountNumber(dto)
+                ActivityType = (int) ActivityTypeEnum.Passive,
+                CurrencyType = (int) dto.CurrencyType,
+                OwnerId = dto.PrincipalId,
+                AccountId = String.Empty
             };
-            result.TypedResult.PersentAccountIdObject = new AccountEntity()
+
+            var mainAccountId = (int)AdbRepository.AccountData.Save(mainAccount);
+            mainAccount.AccountId = $"3014{mainAccountId:000000000}";
+            AdbRepository.AccountData.Save(mainAccount);
+
+            var PercentAccount = new AccountEntity()
             {
                 Balance = 0,
-                ActivityType = ActivityTypeEnum.Passive,
-                CurrencyType = dto.CurrencyType,
-                PrincipalId = dto.PrincipalId,
-                AccountId = GetAccountNumber(dto)
+                ActivityType = (int) ActivityTypeEnum.Passive,
+                CurrencyType = (int) dto.CurrencyType,
+                OwnerId = dto.PrincipalId,
+                AccountId = string.Empty
             };
+            var PercentAccountId = (int)AdbRepository.AccountData.Save(PercentAccount);
+            PercentAccount.AccountId = $"3014{PercentAccountId:000000000}";
+            AdbRepository.AccountData.Save(PercentAccount);
+
+            dto.MainAccountId = mainAccountId;
+            dto.PercentAccountId = PercentAccountId;
             return result;
         }
 
         public ExecutionResult CreateDepositeContract(SaveDepositContractRequest request, ExecutionContext context)
         {
             ExecutionResult<DepositContractEntity> result = context.PreviousResult as ExecutionResult<DepositContractEntity>;
-            if (result == null)
-                return null;
-            CreditContractDto dto = request.Value as CreditContractDto;
+            result = result ?? new ExecutionResult<DepositContractEntity>();
+            DepositContractDto dto = request.Value as DepositContractDto;
 
             if (dto == null)
                 return null;
 
-            result.TypedResult.MainAccountIdObject = new AccountEntity()
+            var mainAccount = new AccountEntity()
             {
                 Balance = 0,
-                ActivityType = ActivityTypeEnum.Passive,
-                CurrencyType = dto.CurrencyType,
-                PrincipalId = dto.PrincipalId,
-                AccountId = GetAccountNumber(dto)
+                ActivityType = (int) ActivityTypeEnum.Passive,
+                CurrencyType = (int) dto.CurrencyType,
+                OwnerId = dto.PrincipalId,
+                AccountId = String.Empty
             };
-            result.TypedResult.PersentAccountIdObject = new AccountEntity()
+
+            var mainAccountId = (int)AdbRepository.AccountData.Save(mainAccount);
+            mainAccount.AccountId = $"3014{mainAccountId:000000000}";
+            AdbRepository.AccountData.Save(mainAccount);
+
+            var PercentAccount = new AccountEntity()
             {
                 Balance = 0,
-                ActivityType = ActivityTypeEnum.Passive,
-                CurrencyType = dto.CurrencyType,
-                PrincipalId = dto.PrincipalId,
-                AccountId = GetAccountNumber(dto)
+                ActivityType = (int) ActivityTypeEnum.Passive,
+                CurrencyType = (int) dto.CurrencyType,
+                OwnerId = dto.PrincipalId,
+                AccountId = string.Empty
             };
+            var PercentAccountId = (int)AdbRepository.AccountData.Save(PercentAccount);
+            PercentAccount.AccountId = $"3014{PercentAccountId:000000000}";
+            AdbRepository.AccountData.Save(PercentAccount);
+
+            dto.MainAccountId = mainAccountId;
+            dto.PercentAccountId = PercentAccountId;
             return result;
         }
-
-        private string GetAccountNumber(CreditContractDto dto)
-        {
-            return string.Empty;
-        }
-
         public override int Priority => PriorityLevels.ZERO_LEVEL;
     }
 }

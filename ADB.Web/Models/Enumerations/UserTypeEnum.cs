@@ -7,12 +7,12 @@ namespace ADB.Web.Models.Enumerations
     public enum UserTypeEnum
     {
         [Display(Name = "OrganisationUserTypeEnum", ResourceType = typeof(Localisation))]
-        Organisation,
+        Organisation = 1,
 
         [Display(Name = "PersonUserTypeEnum", ResourceType = typeof(Localisation))]
-        Person,
+        Person = 2,
 
         [Display(Name = "BusinessmanUserTypeEnum", ResourceType = typeof(Localisation))]
-        Businessman
+        Businessman = 3
     }
 }

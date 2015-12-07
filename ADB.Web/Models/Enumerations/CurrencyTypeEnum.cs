@@ -6,10 +6,10 @@ namespace ADB.Web.Models.Enumerations
     public enum CurrencyTypeEnum
     {
         [Display(Name = "BYR", ResourceType = typeof(Localisation))]
-        BYR,
+        BYR = 1,
         [Display(Name = "USD", ResourceType = typeof(Localisation))]
-        USD,
+        USD = 2,
         [Display(Name = "EUR", ResourceType = typeof(Localisation))]
-        EUR
+        EUR = 3
     }
 }

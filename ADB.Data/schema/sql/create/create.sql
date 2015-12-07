@@ -147,11 +147,11 @@ CREATE TABLE [CreditContract]
 (
 	[Id] int NOT NULL,
 	[CreditType] smallint NOT NULL,
-	[Percent] float NOT NULL,
+	[PercentValue] decimal(18) NOT NULL,
 	[MainAccountId] int NOT NULL,
 	[PercentAcountId] int NOT NULL,
 	[Period] int NOT NULL,
-	[Currency] smallint NOT NULL,
+	[CurrencyType] smallint NOT NULL,
 	[Summ] decimal(18) NOT NULL
 )
 ;
@@ -160,11 +160,12 @@ CREATE TABLE [DepositContract]
 (
 	[Id] int NOT NULL,
 	[DepositType] smallint NOT NULL,
-	[Percent] float NOT NULL,
+	[PercentValue] decimal(18) NOT NULL,
 	[MainAccountId] int NOT NULL,
 	[PercentAccountId] int NOT NULL,
 	[Period] int NOT NULL,
-	[Summ] decimal(18) NOT NULL
+	[Summ] decimal(18) NOT NULL,
+	[CurrencyType] smallint NOT NULL
 )
 ;
 

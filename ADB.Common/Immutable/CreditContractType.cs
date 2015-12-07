@@ -2,7 +2,7 @@
 {
     public enum CreditContractType
     {
-        CreditType1,
-        CreditType2
+        CreditType1 = 1,
+        CreditType2 = 2
     }
 }

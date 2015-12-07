@@ -2,7 +2,7 @@
 {
     public enum ContractTypeEnum
     {
-        DepositContract,
-        CreditContract
+        DepositContract = 1,
+        CreditContract = 2
     }
 }

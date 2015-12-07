@@ -6,9 +6,9 @@ namespace ADB.Web.Models.Enumerations
     public enum ContractTypeEnum
     {
         [Display(Name = "DepositContract", ResourceType = typeof(Localisation))]
-        DepositContract,
+        DepositContract = 1,
 
         [Display(Name = "CreditContract", ResourceType = typeof(Localisation))]
-        CreditContract
+        CreditContract = 2
     }
 }

@@ -254,6 +254,7 @@
     <Content Include="Views\Deposit\Index.cshtml" />
     <Content Include="Views\Credit\Index.cshtml" />
     <Content Include="Views\Deposit\Create.cshtml" />
+    <Content Include="Views\Credit\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

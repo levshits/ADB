@@ -2,7 +2,7 @@
 {
     public enum DepositContractType
     {
-        DepositType1,
-        DepositType2
+        DepositType1 = 1,
+        DepositType2 = 2
     }
 }

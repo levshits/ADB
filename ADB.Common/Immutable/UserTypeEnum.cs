@@ -2,8 +2,8 @@
 {
     public enum UserTypeEnum
     {
-        Organisation,
-        Person,
-        Businessman
+        Organisation = 1,
+        Person = 2,
+        Businessman = 3
     }
 }

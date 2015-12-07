@@ -12,13 +12,13 @@ namespace ADB.Data.Entity
         ///     Gets or sets the principal identifier object.
         /// </summary>
         /// <value>The principal identifier object.</value>
-        public virtual PrincipalEntity PrincipalIdObject { get; set; }
+        public virtual PrincipalEntity OwnerIdObject { get; set; }
 
         /// <summary>
         ///     Gets or sets the principal identifier.
         /// </summary>
         /// <value>The principal identifier.</value>
-        public virtual int PrincipalId { get; set; }
+        public virtual int OwnerId { get; set; }
 
         /// <summary>
         ///     Gets or sets the balance.
@@ -30,7 +30,7 @@ namespace ADB.Data.Entity
         ///     Gets or sets the type of the currency.
         /// </summary>
         /// <value>The type of the currency.</value>
-        public virtual CurrencyTypeEnum CurrencyType { get; set; }
+        public virtual int CurrencyType { get; set; }
 
         /// <summary>
         ///     Gets or sets the account identifier.
@@ -42,12 +42,12 @@ namespace ADB.Data.Entity
         ///     Gets or sets the type of the user.
         /// </summary>
         /// <value>The type of the user.</value>
-        public virtual UserTypeEnum UserType { get; set; }
+        public virtual int UserType { get; set; }
 
         /// <summary>
         ///     Gets or sets the type of the activity.
         /// </summary>
         /// <value>The type of the activity.</value>
-        public virtual ActivityTypeEnum ActivityType { get; set; }
+        public virtual int ActivityType { get; set; }
     }
 }

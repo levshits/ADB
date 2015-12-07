@@ -10,8 +10,18 @@ namespace ADB.Data.Mappers
         {
             Mapper.CreateMap<ClientEntity, ClientDto>();
             Mapper.CreateMap<ClientDto, ClientEntity>();
+
             Mapper.CreateMap<CityDto, CityEntity>();
             Mapper.CreateMap<CityEntity, CityDto>();
+
+            Mapper.CreateMap<ContractEntity, ContractDto>();
+            Mapper.CreateMap<ContractDto, ContractEntity>();
+
+            Mapper.CreateMap<DepositContractEntity, DepositContractDto>();
+            Mapper.CreateMap<DepositContractDto, DepositContractEntity>();
+
+            Mapper.CreateMap<CreditContractEntity, CreditContractDto>();
+            Mapper.CreateMap<CreditContractDto, CreditContractEntity>();
         }
     }
 }

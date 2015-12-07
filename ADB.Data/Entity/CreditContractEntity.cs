@@ -11,7 +11,7 @@ namespace ADB.Data.Entity
         ///     Gets or sets the type of the credit.
         /// </summary>
         /// <value>The type of the credit.</value>
-        public virtual CreditContractType CreditType { get; set; }
+        public virtual int CreditType { get; set; }
 
         /// <summary>
         ///     Gets or sets the main account identifier.
@@ -32,10 +32,10 @@ namespace ADB.Data.Entity
         public virtual int PercentAccountId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the persent account identifier object.
+        ///     Gets or sets the Percent account identifier object.
         /// </summary>
-        /// <value>The persent account identifier object.</value>
-        public virtual AccountEntity PersentAccountIdObject { get; set; }
+        /// <value>The Percent account identifier object.</value>
+        public virtual AccountEntity PercentAccountIdObject { get; set; }
 
         /// <summary>
         ///     Gets or sets the period.
@@ -47,12 +47,13 @@ namespace ADB.Data.Entity
         ///     Gets or sets the type of the currency.
         /// </summary>
         /// <value>The type of the currency.</value>
-        public virtual CurrencyTypeEnum CurrencyType { get; set; }
+        public virtual int CurrencyType { get; set; }
 
         /// <summary>
         ///     Gets or sets the summ.
         /// </summary>
         /// <value>The summ.</value>
         public virtual decimal Summ { get; set; }
+        public virtual decimal PercentValue { get; set; }
     }
 }

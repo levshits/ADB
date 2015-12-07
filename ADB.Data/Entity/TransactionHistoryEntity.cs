@@ -13,7 +13,7 @@ namespace ADB.Data.Entity
         ///     Gets or sets the type of the currency.
         /// </summary>
         /// <value>The type of the currency.</value>
-        public virtual CurrencyTypeEnum CurrencyType { get; set; }
+        public virtual int CurrencyType { get; set; }
 
         /// <summary>
         ///     Gets or sets the create time.
@@ -31,7 +31,7 @@ namespace ADB.Data.Entity
         ///     Gets or sets from account identifier.
         /// </summary>
         /// <value>From account identifier.</value>
-        public virtual int FromAccountId { get; set; }
+        public virtual int? FromAccount { get; set; }
 
         /// <summary>
         ///     Gets or sets from account identifier object.
@@ -43,7 +43,7 @@ namespace ADB.Data.Entity
         ///     Gets or sets to account identifier.
         /// </summary>
         /// <value>To account identifier.</value>
-        public virtual int ToAccountId { get; set; }
+        public virtual int? ToAccount { get; set; }
 
         /// <summary>
         ///     Gets or sets to account identifier object.

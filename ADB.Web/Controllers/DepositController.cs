@@ -15,7 +15,7 @@ namespace ADB.Web.Controllers
     {
         public override ActionResult Index()
         {
-            var result = CommandBus.ExecuteCommand<IList<DepositContractListItemModel>>(new DepositContractListRequest { Paging = new PagingOptions() });
+            var result = CommandBus.ExecuteCommand<IList<DepositContractListItem>>(new DepositContractListRequest { Paging = new PagingOptions() });
 
             var model = Mapper.Map<List<DepositContractListItemModel>>(result.TypedResult) ?? new List<DepositContractListItemModel>();
             return View(model);

@@ -29,10 +29,12 @@ namespace ADB.Common.Dto
         public int PercentAccountId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the persent account identifier object.
+        ///     Gets or sets the Percent account identifier object.
         /// </summary>
-        /// <value>The persent account identifier object.</value>
-        public string PersentAccount { get; set; }
+        /// <value>The Percent account identifier object.</value>
+        public string PercentAccount { get; set; }
+
+        public decimal PercentValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the period.

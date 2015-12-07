@@ -12,12 +12,12 @@ namespace ADB.Data.EntityMap
             Version(x => x.Version);
             Map(x => x.CreateTime);
             Map(x => x.Count);
-            Map(x => x.ToAccountId);
-            Map(x => x.FromAccountId);
+            Map(x => x.ToAccount).Nullable();
+            Map(x => x.FromAccount).Nullable();
             Map(x => x.CurrencyType);
 
-            References(v => v.ToAccountIdObject).Column(nameof(TransactionHistoryEntity.ToAccountId));
-            References(v => v.FromAccountIdObject).Column(nameof(TransactionHistoryEntity.FromAccountId));
+            References(v => v.ToAccountIdObject).Column(nameof(TransactionHistoryEntity.ToAccount)).ReadOnly();
+            References(v => v.FromAccountIdObject).Column(nameof(TransactionHistoryEntity.FromAccount)).ReadOnly();
         }
     }
 }

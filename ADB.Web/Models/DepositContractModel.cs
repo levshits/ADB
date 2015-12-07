@@ -25,10 +25,10 @@ namespace ADB.Web.Models
         public virtual int PercentAccountId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the persent account identifier object.
+        ///     Gets or sets the Percent account identifier object.
         /// </summary>
-        /// <value>The persent account identifier object.</value>
-        public virtual string PersentAccount { get; set; }
+        /// <value>The Percent account identifier object.</value>
+        public virtual string PercentAccount { get; set; }
 
         [Required]
         [LocalisedName()]
@@ -42,5 +42,10 @@ namespace ADB.Web.Models
         [LocalisedName()]
         [DataType(DataType.Currency)]
         public virtual decimal Summ { get; set; }
+        
+        [Required]
+        [LocalisedName()]
+        [DataType(DataType.Currency)]
+        public decimal PercentValue { get; set; }
     }
 }
