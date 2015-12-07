@@ -221,6 +221,9 @@
     </Compile>
     <Compile Include="Models\AccountListItemModel.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\CardFirstStepModel.cs" />
+    <Compile Include="Models\CardListItemModel.cs" />
+    <Compile Include="Models\CardModel.cs" />
     <Compile Include="Models\ClientListItemModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\CreditContractListItemModel.cs" />
@@ -245,6 +248,9 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Card\Index.cshtml" />
+    <Content Include="Views\Card\Create.cshtml" />
+    <Content Include="Views\Card\Save.cshtml" />
     <None Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />

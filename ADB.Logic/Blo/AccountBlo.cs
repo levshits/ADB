@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using ADB.Common.Dto;
 using ADB.Common.Immutable;
+using ADB.Common.Item;
 using ADB.Common.Requests;
 using ADB.Data.Common;
 using ADB.Data.Entity;
@@ -19,6 +21,12 @@ namespace ADB.Logic.Blo
         {
             RegisterCommand<SaveCreditContractRequest>(CreateCreditContract);
             RegisterCommand<SaveDepositContractRequest>(CreateDepositeContract);
+            RegisterCommand<AccountLookupListRequest>(GetAccountLookups);
+        }
+
+        public ExecutionResult<IList<LookupItem>> GetAccountLookups(AccountLookupListRequest request, ExecutionContext context)
+        {
+            return new ExecutionResult<IList<LookupItem>> { TypedResult = AdbRepository.AccountData.Accounts((int)request.Value) };
         }
 
         public AdbRepository AdbRepository => (AdbRepository) Repository;

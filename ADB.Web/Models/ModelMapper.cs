@@ -12,6 +12,12 @@ namespace ADB.Web.Models
             Mapper.CreateMap<ClientModel, ClientDto>();
             Mapper.CreateMap<ClientListItem, ClientListItemModel>();
 
+            Mapper.CreateMap<CardListItem, CardListItemModel>();
+            Mapper.CreateMap<CardListItemModel, CardListItem>();
+
+            Mapper.CreateMap<CardDto, CardModel>();
+            Mapper.CreateMap<CardModel, CardDto>();
+
             Mapper.CreateMap<ContractDto, ContractModel>();
             Mapper.CreateMap<ContractModel, ContractDto>();
 

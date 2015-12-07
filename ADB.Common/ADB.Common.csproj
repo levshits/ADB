@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\AccountDto.cs" />
+    <Compile Include="Dto\CardDto.cs" />
     <Compile Include="Dto\CityDto.cs" />
     <Compile Include="Dto\ClientDto.cs" />
     <Compile Include="Dto\ContractDto.cs" />
@@ -70,13 +71,17 @@
     <Compile Include="Immutable\PriorityLevels.cs" />
     <Compile Include="Immutable\UserTypeEnum.cs" />
     <Compile Include="Item\AccountListItem.cs" />
+    <Compile Include="Item\CardListItem.cs" />
     <Compile Include="Item\CreditContractListItem.cs" />
     <Compile Include="Item\DepositContractListItem.cs" />
     <Compile Include="Item\LookupItem.cs" />
     <Compile Include="Item\ClientListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\AccountListRequest.cs" />
+    <Compile Include="Requests\AccountLookupListRequest.cs" />
     <Compile Include="Requests\AccountRequest.cs" />
+    <Compile Include="Requests\CardListRequest.cs" />
+    <Compile Include="Requests\CardRequest.cs" />
     <Compile Include="Requests\CityLookupListRequest.cs" />
     <Compile Include="Requests\ClientByIdRequest.cs" />
     <Compile Include="Requests\ClientListRequest.cs" />
@@ -86,6 +91,7 @@
     <Compile Include="Requests\DeleteClientByIdRequest.cs" />
     <Compile Include="Requests\DepositContractListRequest.cs" />
     <Compile Include="Requests\SaveAccountRequest.cs" />
+    <Compile Include="Requests\SaveCardDto.cs" />
     <Compile Include="Requests\SaveClientRequest.cs" />
     <Compile Include="Requests\SaveContractRequest.cs" />
     <Compile Include="Requests\SaveCreditContractRequest.cs" />

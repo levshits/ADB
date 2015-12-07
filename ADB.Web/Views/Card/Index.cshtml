@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ADB.Web.Models.CardListItemModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Карты</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrincipalName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountId)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrincipalName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountId)
+        </td>
+    </tr>
+}
+
+</table>

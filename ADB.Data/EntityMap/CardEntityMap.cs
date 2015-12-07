@@ -7,6 +7,7 @@ namespace ADB.Data.EntityMap
     {
         public CardEntityMap()
         {
+            Table("Card");
             Id(x => x.Id);
             Map(x => x.Number).Length(16);
             Map(x => x.AccountId);

@@ -21,6 +21,12 @@ namespace ADB.Logic.Blo
         {
             RegisterCommand<SaveCreditContractRequest>(CreateCreateContract);
             RegisterCommand<CreditContractListRequest>(GetCreditsList);
+            RegisterCommand<CloseDayRequest>(CloseDayHandler);
+        }
+
+        private ExecutionResult CloseDayHandler(CloseDayRequest request, ExecutionContext handler)
+        {
+            throw new System.NotImplementedException();
         }
 
         public AdbRepository AdbRepository => (AdbRepository) Repository;

@@ -14,6 +14,9 @@ namespace ADB.Data.Mappers
             Mapper.CreateMap<CityDto, CityEntity>();
             Mapper.CreateMap<CityEntity, CityDto>();
 
+            Mapper.CreateMap<CardEntity, CardDto>();
+            Mapper.CreateMap<CardDto, CardEntity>();
+
             Mapper.CreateMap<ContractEntity, ContractDto>();
             Mapper.CreateMap<ContractDto, ContractEntity>();
 

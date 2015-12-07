@@ -21,6 +21,12 @@ namespace ADB.Logic.Blo
         {
             RegisterCommand<SaveDepositContractRequest>(CreateDepositeContract);
             RegisterCommand<DepositContractListRequest>(GetDepositList);
+            RegisterCommand<CloseDayRequest>(CloseDayHandler);
+        }
+
+        private ExecutionResult CloseDayHandler(CloseDayRequest request, ExecutionContext context)
+        {
+            throw new System.NotImplementedException();
         }
 
         private ExecutionResult GetDepositList(DepositContractListRequest request, ExecutionContext context)
