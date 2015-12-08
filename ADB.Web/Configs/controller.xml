@@ -8,11 +8,11 @@
   </object>
   <object id="ClientController" type="ADB.Web.Controllers.ClientController, ADB.Web" parent="BaseController" singleton="false">
   </object>
-  <object id="AccountController" type="ADB.Web.Controllers.AccountController, ADB.Web" parent="BaseController" singleton="false">
+  <object id="AdminController" type="ADB.Web.Controllers.AdminController, ADB.Web" parent="BaseController" singleton="false">
   </object>
   <object id="CardController" type="ADB.Web.Controllers.CardController, ADB.Web" parent="BaseController" singleton="false">
   </object>
-  <object id="CashController" type="ADB.Web.Controllers.CashController, ADB.Web" parent="BaseController" singleton="false">
+  <object id="AtmController" type="ADB.Web.Controllers.AtmController, ADB.Web" parent="BaseController" singleton="false">
   </object>
   <object id="CreditController" type="ADB.Web.Controllers.CreditController, ADB.Web" parent="BaseController" singleton="false">
   </object>

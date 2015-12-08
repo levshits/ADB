@@ -29,5 +29,7 @@ namespace ADB.Data.Entity
         /// </summary>
         /// <value>The type of the contract.</value>
         public virtual int ContractType { get; set; }
+
+        public virtual DateTime ProcessingTime { get; set; }
     }
 }

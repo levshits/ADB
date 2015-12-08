@@ -11,7 +11,7 @@ using Levshits.Web.Common.Controllers;
 
 namespace ADB.Web.Controllers
 {
-    public class AccountController: BaseController
+    public class AdminController: BaseController
     {
         public override ActionResult Index()
         {

@@ -210,9 +210,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\LocalisedNameAttribute.cs" />
     <Compile Include="Attributes\TransactionalAttribute.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CardController.cs" />
-    <Compile Include="Controllers\CashController.cs" />
+    <Compile Include="Controllers\AtmController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\CreditController.cs" />
     <Compile Include="Controllers\DepositController.cs" />
@@ -221,6 +221,7 @@
     </Compile>
     <Compile Include="Models\AccountListItemModel.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\CardEntryModel.cs" />
     <Compile Include="Models\CardFirstStepModel.cs" />
     <Compile Include="Models\CardListItemModel.cs" />
     <Compile Include="Models\CardModel.cs" />
@@ -270,7 +271,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">
