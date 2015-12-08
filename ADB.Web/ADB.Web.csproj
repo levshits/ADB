@@ -229,6 +229,7 @@
     <Compile Include="Models\CashModel.cs" />
     <Compile Include="Models\ClientListItemModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="Models\CloseDayModel.cs" />
     <Compile Include="Models\CreditContractListItemModel.cs" />
     <Compile Include="Models\DepositContractListItemModel.cs" />
     <Compile Include="Models\CreditContractModel.cs" />
@@ -262,6 +263,7 @@
     <Content Include="Views\Atm\Cash.cshtml" />
     <Content Include="Views\Atm\Fail.cshtml" />
     <Content Include="Views\Atm\Success.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <None Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
@@ -281,7 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADB.Common\ADB.Common.csproj">

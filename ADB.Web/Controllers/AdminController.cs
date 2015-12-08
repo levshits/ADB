@@ -15,22 +15,20 @@ namespace ADB.Web.Controllers
     {
         public override ActionResult Index()
         {
-            var result = CommandBus.ExecuteCommand<IList<AccountListItem>>(new AccountListRequest { Paging = new PagingOptions() });
-
-            var model = Mapper.Map<List<AccountListItemModel>>(result.TypedResult) ?? new List<AccountListItemModel>();
+            var model = new CloseDayModel();
             return View(model);
         }
 
-        public ActionResult Details(int id)
+        [HttpPost]
+        public ActionResult CloseDay(CloseDayModel model)
         {
-            var result = CommandBus.ExecuteCommand<IList<AccountDto>>(new AccountRequest { Value = id });
-
-            var model = Mapper.Map<AccountModel>(result.TypedResult);
-            if (model == null)
+            if (ModelState.IsValid)
             {
+                CommandBus.ExecuteCommand(new CloseDayRequest {Value = model.DayToClose});
                 return RedirectToAction("Index");
             }
-            return View(model);
+            return View("Index", model);
         }
+
     }
 }
