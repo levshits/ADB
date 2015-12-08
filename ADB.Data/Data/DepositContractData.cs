@@ -33,5 +33,12 @@ namespace ADB.Data.Data
             query.Select(projections);
             return query.TransformUsing(Transformers.AliasToBean<DepositContractListItem>()).List<DepositContractListItem>();
         }
+
+        public IList<DepositContractEntity> GetAllDeposits()
+        {
+            DepositContractEntity depositContractEntity = null;
+            var query = DataProvider.QueryOver(() => depositContractEntity);
+            return query.List();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace ADB.Web.Models
     {
         [Required]
         [LocalisedName()]
-        [UIHint("Date")]
+        [DataType(DataType.Date)]
         public DateTime AssignDate { get; set; } = DateTime.Today;
 
         [Required]

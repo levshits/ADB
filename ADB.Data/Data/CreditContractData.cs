@@ -28,5 +28,12 @@ namespace ADB.Data.Data
             query.Select(projections);
             return query.TransformUsing(Transformers.AliasToBean<CreditContractListItem>()).List<CreditContractListItem>();
         }
+
+        public IList<CreditContractEntity> GetAllCredits()
+        {
+            CreditContractEntity creditContractEntity = null;
+            var query = DataProvider.QueryOver(() => creditContractEntity);
+            return query.List();
+        }
     }
 }

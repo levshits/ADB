@@ -95,7 +95,7 @@ namespace ADB.Logic.Blo
             return context.PreviousResult;
         }
 
-        private static int GetRepositoryAccount(CurrencyTypeEnum currencyType)
+        public static int GetRepositoryAccount(CurrencyTypeEnum currencyType)
         {
             switch (currencyType)
             {
@@ -109,7 +109,7 @@ namespace ADB.Logic.Blo
             return REPOSITORY_ACCOUNT_BYR;
         }
 
-        private static int GetBankAccount(CurrencyTypeEnum currencyType)
+        public static int GetBankAccount(CurrencyTypeEnum currencyType)
         {
             switch (currencyType)
             {

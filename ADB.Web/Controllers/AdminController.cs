@@ -7,6 +7,7 @@ using ADB.Common.Requests;
 using ADB.Web.Models;
 using AutoMapper;
 using Levshits.Data.Common;
+using Levshits.Logic.Common;
 using Levshits.Web.Common.Controllers;
 
 namespace ADB.Web.Controllers
@@ -24,8 +25,12 @@ namespace ADB.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                CommandBus.ExecuteCommand(new CloseDayRequest {Value = model.DayToClose});
-                return RedirectToAction("Index");
+                ExecutionResult<List<string>> result =  CommandBus.ExecuteCommand(new CloseDayRequest {Value = model.DayToClose}) as ExecutionResult<List<string>>;
+                if (result != null)
+                {
+                    var operations = result.TypedResult;
+                    return View("Report", operations);
+                }
             }
             return View("Index", model);
         }

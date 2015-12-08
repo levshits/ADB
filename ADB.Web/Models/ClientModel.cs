@@ -47,7 +47,7 @@ namespace ADB.Web.Models
         /// <value>The birth date.</value>
         [Required]
         [LocalisedName()]
-        [UIHint("Date")]
+        [DataType(DataType.Date)]
         public virtual DateTime BirthDate { get; set; } = DateTime.Today;
         /// <summary>
         /// Gets or sets the passport series.
@@ -80,7 +80,7 @@ namespace ADB.Web.Models
         /// <value>The issued date.</value>
         [Required]
         [LocalisedName()]
-        [UIHint("Date")]
+        [DataType(DataType.Date)]
         public virtual DateTime IssuedDate { get; set; } = DateTime.Today;
         /// <summary>
         /// Gets or sets the passport identifier.

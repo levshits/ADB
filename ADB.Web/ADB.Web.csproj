@@ -185,9 +185,6 @@
     <Content Include="Content\bootstrap\bootstrap.css.map" />
     <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
-    <Content Include="Scripts\ADB\js-common.js" />
-    <Content Include="Scripts\bootstrap\bootstrap-datepicker.js" />
-    <Content Include="Scripts\bootstrap\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery\jquery-2.1.4.min.map" />
@@ -263,11 +260,11 @@
     <Content Include="Views\Atm\Fail.cshtml" />
     <Content Include="Views\Atm\Success.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <None Include="Views\Admin\Report.cshtml" />
     <None Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Date.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Date.cshtml" />
     <Content Include="Views\Deposit\Index.cshtml" />
     <Content Include="Views\Credit\Index.cshtml" />
