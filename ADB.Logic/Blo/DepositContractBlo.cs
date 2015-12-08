@@ -48,6 +48,7 @@ namespace ADB.Logic.Blo
                 return null;
             }
             var entity = Mapper.Map<DepositContractEntity>(dto);
+            entity.ContractType = (int)ContractTypeEnum.DepositContract;
             AdbRepository.DepositContractData.Save(entity);
             return new ExecutionResult();
         }

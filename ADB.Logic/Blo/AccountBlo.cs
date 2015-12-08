@@ -22,6 +22,18 @@ namespace ADB.Logic.Blo
             RegisterCommand<SaveCreditContractRequest>(CreateCreditContract);
             RegisterCommand<SaveDepositContractRequest>(CreateDepositeContract);
             RegisterCommand<AccountLookupListRequest>(GetAccountLookups);
+            RegisterCommand<CashRequest>(GetCash);
+        }
+
+        private ExecutionResult GetCash(CashRequest request, ExecutionContext context)
+        {
+            var account = AdbRepository.AccountData.GetEntityById(request.AccountId);
+            if (account.Balance > request.Summ)
+            {
+                account.Balance -= request.Summ;
+            }
+            AdbRepository.AccountData.Save(account);
+            return new ExecutionResult();
         }
 
         public ExecutionResult<IList<LookupItem>> GetAccountLookups(AccountLookupListRequest request, ExecutionContext context)

@@ -41,6 +41,7 @@ namespace ADB.Logic.Blo
                 return null;
             }
             var entity = Mapper.Map<CreditContractEntity>(dto);
+            entity.ContractType = (int) ContractTypeEnum.CreditContract;
             AdbRepository.CreditContractData.Save(entity);
             return new ExecutionResult();
         }

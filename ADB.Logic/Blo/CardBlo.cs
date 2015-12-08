@@ -23,6 +23,14 @@ namespace ADB.Logic.Blo
         {
             RegisterCommand<CardListRequest>(GetCardsList);
             RegisterCommand<SaveCardRequest>(SaveCard);
+            RegisterCommand<CardRequest>(GetCard);
+        }
+
+        private ExecutionResult GetCard(CardRequest request, ExecutionContext context)
+        {
+            var entity = AdbRepository.CardData.GetCardByNumber((string)request.Value);
+            var dto = Mapper.Map<CardDto>(entity);
+            return new ExecutionResult<CardDto> {TypedResult = dto};
         }
 
         private ExecutionResult SaveCard(SaveCardRequest request, ExecutionContext context)

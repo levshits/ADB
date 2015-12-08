@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ADB.Common.Item;
 using ADB.Data.Entity;
 using Levshits.Data;
@@ -34,6 +35,15 @@ namespace ADB.Data.Data
             query.Select(projections);
             return query.TransformUsing(Transformers.AliasToBean<CardListItem>()).List<CardListItem>();
 
+        }
+
+        public CardEntity GetCardByNumber(string value)
+        {
+            CardEntity cardEntity = null;
+            var query = DataProvider.QueryOver(() => cardEntity);
+            query.Where(x => x.Number ==value);
+            var entity = query.SingleOrDefault();
+            return entity;
         }
     }
 }

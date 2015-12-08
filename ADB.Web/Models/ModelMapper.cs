@@ -1,5 +1,6 @@
 ﻿using ADB.Common.Dto;
 using ADB.Common.Item;
+using ADB.Data.Entity;
 using AutoMapper;
 
 namespace ADB.Web.Models
@@ -14,6 +15,12 @@ namespace ADB.Web.Models
 
             Mapper.CreateMap<CardListItem, CardListItemModel>();
             Mapper.CreateMap<CardListItemModel, CardListItem>();
+
+            Mapper.CreateMap<AccountDto, AccountEntity>();
+            Mapper.CreateMap<AccountEntity, AccountDto>();
+
+            Mapper.CreateMap<CardDto, CardEntity>();
+            Mapper.CreateMap<CardEntity, CardDto>();
 
             Mapper.CreateMap<CardDto, CardModel>();
             Mapper.CreateMap<CardModel, CardDto>();

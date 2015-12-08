@@ -82,6 +82,7 @@
     <Compile Include="Requests\AccountRequest.cs" />
     <Compile Include="Requests\CardListRequest.cs" />
     <Compile Include="Requests\CardRequest.cs" />
+    <Compile Include="Requests\CashRequest.cs" />
     <Compile Include="Requests\CityLookupListRequest.cs" />
     <Compile Include="Requests\ClientByIdRequest.cs" />
     <Compile Include="Requests\ClientListRequest.cs" />

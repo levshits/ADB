@@ -28,6 +28,31 @@ namespace ADB.Logic.Blo
         {
             RegisterCommand<SaveCreditContractRequest>(InitCreditAccount);
             RegisterCommand<SaveDepositContractRequest>(InitDepositAccount);
+            RegisterCommand<CashRequest>(GetCash);
+        }
+
+        private ExecutionResult GetCash(CashRequest request, ExecutionContext context)
+        {
+            var account = AdbRepository.AccountData.GetEntityById(request.AccountId);
+            AdbRepository.TransactionHistoryData.Save(
+                new TransactionHistoryEntity()
+                {
+                    Count = request.Summ,
+                    CreateTime = DateTime.Now,
+                    CurrencyType = (int)account.CurrencyType,
+                    FromAccount = account.Id,
+                    ToAccount = GetRepositoryAccount((CurrencyTypeEnum)account.CurrencyType)
+                });
+            AdbRepository.TransactionHistoryData.Save(
+                new TransactionHistoryEntity()
+                {
+                    Count = request.Summ,
+                    CreateTime = DateTime.Now,
+                    CurrencyType = (int)account.CurrencyType,
+                    FromAccount = GetRepositoryAccount((CurrencyTypeEnum)account.CurrencyType),
+                    ToAccount = null
+                });
+            return context.PreviousResult;
         }
 
         private ExecutionResult InitDepositAccount(SaveDepositContractRequest request, ExecutionContext context)

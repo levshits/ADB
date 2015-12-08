@@ -221,10 +221,12 @@
     </Compile>
     <Compile Include="Models\AccountListItemModel.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\BalanceModel.cs" />
     <Compile Include="Models\CardEntryModel.cs" />
     <Compile Include="Models\CardFirstStepModel.cs" />
     <Compile Include="Models\CardListItemModel.cs" />
     <Compile Include="Models\CardModel.cs" />
+    <Compile Include="Models\CashModel.cs" />
     <Compile Include="Models\ClientListItemModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\CreditContractListItemModel.cs" />
@@ -242,6 +244,7 @@
     <Compile Include="Models\Enumerations\Nationality.cs" />
     <Compile Include="Models\Enumerations\UserTypeEnum.cs" />
     <Compile Include="Models\ModelMapper.cs" />
+    <Compile Include="Models\PinModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +255,13 @@
     <Content Include="Views\Card\Index.cshtml" />
     <Content Include="Views\Card\Create.cshtml" />
     <Content Include="Views\Card\Save.cshtml" />
+    <Content Include="Views\Atm\Index.cshtml" />
+    <Content Include="Views\Atm\Menu.cshtml" />
+    <Content Include="Views\Atm\CheckPin.cshtml" />
+    <Content Include="Views\Atm\Balance.cshtml" />
+    <Content Include="Views\Atm\Cash.cshtml" />
+    <Content Include="Views\Atm\Fail.cshtml" />
+    <Content Include="Views\Atm\Success.cshtml" />
     <None Include="Views\Client\Edit.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />

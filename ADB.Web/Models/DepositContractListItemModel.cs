@@ -1,5 +1,5 @@
-﻿using ADB.Common.Immutable;
-using ADB.Web.Attributes;
+﻿using ADB.Web.Attributes;
+using ADB.Web.Models.Enumerations;
 using Levshits.Web.Common.Models;
 
 namespace ADB.Web.Models
