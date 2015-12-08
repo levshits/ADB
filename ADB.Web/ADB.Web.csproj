@@ -220,7 +220,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountListItemModel.cs" />
-    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\BalanceModel.cs" />
     <Compile Include="Models\CardEntryModel.cs" />
     <Compile Include="Models\CardFirstStepModel.cs" />

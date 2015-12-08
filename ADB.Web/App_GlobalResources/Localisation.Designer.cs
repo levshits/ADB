@@ -61,6 +61,24 @@ namespace ADB.Web.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Номер счета.
+        /// </summary>
+        public static string AccountId {
+            get {
+                return ResourceManager.GetString("AccountId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Номер счета.
+        /// </summary>
+        public static string AccountNumber {
+            get {
+                return ResourceManager.GetString("AccountNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Активный.
         /// </summary>
         public static string Active {
@@ -75,6 +93,24 @@ namespace ADB.Web.App_GlobalResources {
         public static string ActivePassive {
             get {
                 return ResourceManager.GetString("ActivePassive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Тип активности.
+        /// </summary>
+        public static string ActivityType {
+            get {
+                return ResourceManager.GetString("ActivityType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Баланс.
+        /// </summary>
+        public static string Balance {
+            get {
+                return ResourceManager.GetString("Balance", resourceCulture);
             }
         }
         
@@ -111,6 +147,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string BYR {
             get {
                 return ResourceManager.GetString("BYR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент.
+        /// </summary>
+        public static string ClientId {
+            get {
+                return ResourceManager.GetString("ClientId", resourceCulture);
             }
         }
         
@@ -156,6 +201,24 @@ namespace ADB.Web.App_GlobalResources {
         public static string CreditType2 {
             get {
                 return ResourceManager.GetString("CreditType2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Валюта.
+        /// </summary>
+        public static string CurrencyType {
+            get {
+                return ResourceManager.GetString("CurrencyType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата.
+        /// </summary>
+        public static string DayToClose {
+            get {
+                return ResourceManager.GetString("DayToClose", resourceCulture);
             }
         }
         
@@ -376,6 +439,15 @@ namespace ADB.Web.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Номер.
+        /// </summary>
+        public static string Number {
+            get {
+                return ResourceManager.GetString("Number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Юридическое лицо.
         /// </summary>
         public static string OrganisationUserTypeEnum {
@@ -435,6 +507,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string Position {
             get {
                 return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Клиент.
+        /// </summary>
+        public static string PrincipalName {
+            get {
+                return ResourceManager.GetString("PrincipalName", resourceCulture);
             }
         }
         
@@ -516,6 +597,15 @@ namespace ADB.Web.App_GlobalResources {
         public static string USD {
             get {
                 return ResourceManager.GetString("USD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сумма.
+        /// </summary>
+        public static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
             }
         }
     }

@@ -270,4 +270,34 @@
   <data name="Id" xml:space="preserve">
     <value>Идентификатор</value>
   </data>
+  <data name="AccountId" xml:space="preserve">
+    <value>Номер счета</value>
+  </data>
+  <data name="AccountNumber" xml:space="preserve">
+    <value>Номер счета</value>
+  </data>
+  <data name="ActivityType" xml:space="preserve">
+    <value>Тип активности</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Баланс</value>
+  </data>
+  <data name="ClientId" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="CurrencyType" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="DayToClose" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="PrincipalName" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
 </root>
